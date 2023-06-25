@@ -1,0 +1,59 @@
+/* MessageContainer.css */
+.message-container {
+    flex-grow: 1;
+    overflow: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.message.bot {
+    justify-content: flex-start;
+    background-color: #1c1c1c;
+}
+
+.message.user {
+    justify-content: flex-end;
+    background-color: #2c2c2c;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.message p {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

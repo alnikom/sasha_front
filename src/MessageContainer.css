@@ -1,0 +1,74 @@
+/* MessageContainer.css */
+.message-container {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-grow:1;
+    padding: 16px;
+    overflow-y:auto;
+    max-height: calc(100vh - 16px); /* Set the maximum height based on the viewport height */
+
+}
+
+.message-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    min-height: 0; /* Add this line */
+    background-color: transparent
+}
+
+.message.bot {
+    justify-content: flex-start;
+    background-color: transparent;
+    align-self: flex-start;
+}
+
+.message.user {
+    justify-content: flex-end;
+    background-color: transparent;
+    align-self: flex-end; /* Add this line to align the user message to the right */
+}
+
+.message .avatar {
+    aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio */
+    border-radius: 50%; /* Make the avatar round */
+    margin-right: 10px; /* Add some spacing between the avatar and the message */
+    margin-left: 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .message .avatar {
+        width: 60px; /* Set a different width for smaller screens */
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+    .message .avatar {
+        width: 120px; /* Set a different width for larger screens */
+    }
+}
+
+
+.message p {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 0;
+}
+
+
+
+

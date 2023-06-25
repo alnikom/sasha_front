@@ -1,0 +1,43 @@
+/* InputContainer.css */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    /* Add other styles as needed */
+    min-height: 100px; /* Adjust this value as needed */
+    z-index: 1;
+}
+
+.background-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-image: url('./6176650.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: -1;
+    height: 100%; /* Set the height to 100% */
+}
+
+.input-field {
+    flex-grow: 1;
+    /* Add other styles as needed */
+    position: relative; /* Add this line to create a new stacking context */
+    resize: none;
+}
+
+.send-button {
+    background-color: #ff7f50;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative; /* Add this line to create a new stacking context */
+}

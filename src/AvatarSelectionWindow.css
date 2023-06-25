@@ -1,0 +1,70 @@
+.avatar-selection-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    z-index: 2;
+    overflow-y: auto;
+}
+
+.avatar-selection-window h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust the minimum and maximum width of the grid items */
+    justify-content: center;
+    grid-gap: 16px; /* Add gap between grid items */
+    margin-top: 16px;
+}
+
+.avatar-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Add this line to maintain aspect ratio */
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+
+
+.avatar-grid img.selected {
+    border: 2px solid #ff7f50;
+}
+
+.avatar-grid img:hover {
+    transform: scale(1.1);
+    border-color: #ff7f50;
+}
+
+.avatar-grid img::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #ff7f50;
+    border-radius: 50%;
+    animation: sparks 1s infinite;
+}
+
+@media (max-width: 768px) {
+    .avatar-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adjust the minimum and maximum width of the grid items for smaller screens */
+    }
+}
+
+
+
